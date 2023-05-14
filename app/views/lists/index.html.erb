@@ -1,0 +1,44 @@
+    <section class="jumbotron py-5"
+    style="background-image: url(https://images.unsplash.com/photo-1443453489887-98f56bc5bb38?ixlib=rb-0.3.5&amp;s=13ea309e96c29da90ee6453003ba8408&amp;auto=format&amp;fit=crop&amp;w=auto&amp;q=80);"
+    >
+      <div class="container-fluid" 
+      >
+        <div class="row justify-content-center text-center">
+          <div class="px-4 py-5 my-5 text-center">
+            <h1 class="display-5 fw-bold">Save any kind of music</h1>
+            <div class="col-lg-6 mx-auto">
+              <p class="lead mb-4">classic</p>
+              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-light pt-5 pb-5">
+      <div class="container pb-5">
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+        <% @lists.each do |list| %>
+        <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url(https://images.unsplash.com/photo-1443453489887-98f56bc5bb38?ixlib=rb-0.3.5&amp;s=13ea309e96c29da90ee6453003ba8408&amp;auto=format&amp;fit=crop&amp;w=750&amp;q=80);">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold text-white"><%= list.name %></h2>
+            </div>
+            </div>
+        </div>
+        <% end %>
+
+
+
+
+          <div class="col">
+          <button type="button"
+                  class="btn btn-outline-secondary btn-lg px-4">Create a movie list</button>
+            <div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

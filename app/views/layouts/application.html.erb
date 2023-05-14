@@ -11,6 +11,31 @@
   </head>
 
   <body>
+  <nav class="navbar navbar-light bg-white  navbar-expand-md">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          <img src=" https://dummyimage.com/102x30/007bff/ffffff?text=logo"
+            alt="image" height="30">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNav3" aria-controls="navbarNav3"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav3">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+            <%= link_to "My lists", lists_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "New lists", new_list_path, class: "nav-link" %>
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
