@@ -1,0 +1,25 @@
+<section class="bg-light pt-5 pb-5">
+    <div class="container pb-5">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <%= link_to "Add Movies", new_list_bookmark_path(params[:id]), class: "btn btn-outline-secondary btn-lg px-4" %>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <% @bookmarks.each do |bookmark| %>
+            <% if bookmark.list_id === params[:id].to_i %>
+                <div class="col">
+                    <div class="card h-100">
+                    <%= image_tag Movie.find(bookmark.movie_id).poster_url, class: "card-img-top", alt: "..." %>
+                        
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= Movie.find(bookmark.movie_id).title %>
+                            </h5>
+                            <p class="card-text"><%= Movie.find(bookmark.movie_id).overview %></p>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+            <% end %>
+        </div>
+    </div>
+</section>
